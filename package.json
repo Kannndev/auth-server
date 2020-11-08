@@ -1,0 +1,30 @@
+{
+  "name": "auth-server",
+  "version": "1.0.0",
+  "description": "Auth Sample using node.js and cookie mechanism",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kannndev/auth-server.git"
+  },
+  "author": "Kannan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kannndev/auth-server/issues"
+  },
+  "homepage": "https://github.com/Kannndev/auth-server#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "ioredis": "^4.19.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.13",
+    "path-to-regexp": "^6.2.0"
+  }
+}
