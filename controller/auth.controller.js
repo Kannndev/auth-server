@@ -23,7 +23,7 @@ const login = async (req, res, next) => {
 
 const refreshToken = async (req, res, next) => {
   try {
-    const response = await userService.refreshToken(req.query);
+    const response = await userService.refreshToken(req.body);
     res.status(200).json({ data: response });
   } catch (err) {
     next(err);
@@ -32,6 +32,6 @@ const refreshToken = async (req, res, next) => {
 
 app.post('/auth/signup', signup);
 app.post('/auth/login', login);
-app.get('/auth/refresh-token', refreshToken);
+app.post('/auth/refresh-token', refreshToken);
 
 module.exports = app;

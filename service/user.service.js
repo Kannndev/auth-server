@@ -54,8 +54,8 @@ const login = async ({ email, password }) => {
   }
 };
 
-const refreshToken = async ({ token }) => {
-  const isTokenActive = await tokenService.isActiveToken(token);
+const refreshToken = async ({ refreshToken }) => {
+  const isTokenActive = await tokenService.isActiveToken(refreshToken);
   if (!isTokenActive) {
     throw {
       code: 401,
