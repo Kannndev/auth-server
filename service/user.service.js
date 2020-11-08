@@ -83,7 +83,7 @@ const refreshToken = async ({ token }) => {
 const getUserInfo = async (userId) => {
   const userProjection = {
     password: false,
-  };
+  }; // projection with field false will not return the field in responnse
   return User.findById(userId, userProjection);
 };
 
