@@ -5,7 +5,7 @@ const { ACCESS_TOKEN_SECRET, REFRESH_TOKEN_SECRET } = process.env;
 
 const createAccessToken = async (userId) => {
   let accessToken = jwt.sign({ user: { _id: userId } }, ACCESS_TOKEN_SECRET, {
-    expiresIn: '10m',
+    expiresIn: '60m',
   });
   await redis.set(accessToken, true);
   return accessToken;
